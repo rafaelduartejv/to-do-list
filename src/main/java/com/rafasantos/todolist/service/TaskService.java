@@ -3,6 +3,7 @@ package com.rafasantos.todolist.service;
 
 import com.rafasantos.todolist.model.Task;
 import com.rafasantos.todolist.repository.TaskRepository;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,10 +12,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class TaskService {
 
-    @Autowired
+
     private TaskRepository taskRepository;
 
     public Task createTask(Task task){
